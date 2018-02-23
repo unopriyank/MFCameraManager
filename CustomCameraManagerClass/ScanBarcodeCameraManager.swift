@@ -99,7 +99,7 @@ open class ScanBarcodeCameraManager: NSObject, AVCaptureMetadataOutputObjectsDel
                 switch (orientation)
                 {
                 case .portrait:
-                    previewLayerConnection.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
+                    previewLayerConnection.videoOrientation = AVCaptureVideoOrientation.portrait
                     break
                 case .landscapeRight:
                     previewLayerConnection.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
@@ -108,10 +108,10 @@ open class ScanBarcodeCameraManager: NSObject, AVCaptureMetadataOutputObjectsDel
                     previewLayerConnection.videoOrientation = AVCaptureVideoOrientation.landscapeRight
                     break
                 case .portraitUpsideDown:
-                    previewLayerConnection.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
+                    previewLayerConnection.videoOrientation = AVCaptureVideoOrientation.portraitUpsideDown
                     break
                 default:
-                    previewLayerConnection.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
+                    previewLayerConnection.videoOrientation = AVCaptureVideoOrientation.portrait
                     break
                 }
             }
@@ -398,7 +398,7 @@ open class ScanBarcodeCameraManager: NSObject, AVCaptureMetadataOutputObjectsDel
         let previewLayerConnection =  self.previewLayer?.connection
         switch (orientation) {
         case .portrait:
-            previewLayerConnection?.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
+            previewLayerConnection?.videoOrientation = AVCaptureVideoOrientation.portrait
             break
         case .landscapeRight:
             previewLayerConnection?.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
@@ -407,10 +407,10 @@ open class ScanBarcodeCameraManager: NSObject, AVCaptureMetadataOutputObjectsDel
             previewLayerConnection?.videoOrientation = AVCaptureVideoOrientation.landscapeRight
             break
         case .portraitUpsideDown:
-            previewLayerConnection?.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
+            previewLayerConnection?.videoOrientation = AVCaptureVideoOrientation.portraitUpsideDown
             break
         default:
-            previewLayerConnection?.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
+            previewLayerConnection?.videoOrientation = AVCaptureVideoOrientation.portrait
             break
         }
         
